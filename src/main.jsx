@@ -4,7 +4,7 @@ import './index.css'
 import App from './App'
 import './assets/Main.css'
 import './assets/fonts.css'
-import 'minireset.css'
+import '@unocss/reset/tailwind.css'
 ReactDOM.render(
   <React.StrictMode>
     <App />
