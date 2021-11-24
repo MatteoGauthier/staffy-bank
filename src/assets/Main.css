@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+.Titre {
+	font-family: "ThunderLC", ThunderLC;
+	font-weight: 800;
+	font-size: 124px;
+	margin-bottom: 1rem;
+	margin-top: 3rem;
+	text-align: end;
+	line-height: 94px;
+}
+
+.Homme {
+	position: absolute;
+	z-index: -1;
+	left: -59px;
+	width: 262px;
+	top: -51px;
+}
+
+.subtitle {
+	font-family: "Inter", sans-serif;
+	font-weight: 700;
+	font-size: 24px;
+	max-width: 216px;
+	text-align: right;
+}
+
+.paragraph {
+	font-family: "Inter", sans-serif;
+	font-weight: 400;
+	font-size: 18px;
+	max-width: 216px;
+	margin-top: 1rem;
+	text-align: right;
+}
+
+.conponent {
+	margin-right: 22px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+
+.SizeImage {
+width: 359px;
+display: block;
+	margin: 0 auto;
+	margin-top: 3rem;
+}
