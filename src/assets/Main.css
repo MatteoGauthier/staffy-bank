@@ -154,7 +154,7 @@
 	padding: 11px 40px;
 	color: white;
 
-	background: #FF3867;
+	background: #ff3867;
 	font-family: Inter;
 	font-style: normal;
 	font-weight: bold;
@@ -164,7 +164,7 @@
 }
 
 .bgRed {
-	background: #FFEEF2;
+	background: #ffeef2;
 	/* height: 100%; */
 	width: 250px;
 	height: 434px;
@@ -176,7 +176,7 @@
 	justify-content: space-between;
 }
 
-.redCard{
+.redCard {
 	/* width: 100%; */
 	position: absolute;
 	inset: 0;
@@ -185,7 +185,7 @@
 	left: 10px;
 }
 
-.greenCard{
+.greenCard {
 	/* width: 100%; */
 	position: absolute;
 	inset: 0;
@@ -195,7 +195,7 @@
 }
 
 .bgGreen {
-	background: #E2FFF1;
+	background: #e2fff1;
 	/* height: 100%; */
 	width: 250px;
 	height: 434px;
@@ -212,11 +212,97 @@
 	padding: 11px 40px;
 	color: white;
 
-	background: #00EF7E;
+	background: #00ef7e;
 	font-family: Inter;
 	font-style: normal;
 	font-weight: bold;
 	font-size: 22px;
 	line-height: 27px;
 	text-align: center;
+}
+
+.number {
+	font-family: "Inter", sans-serif;
+	font-weight: 700;
+	font-size: 50px;
+	max-width: 190px;
+	color: #FF3867;
+	margin-left: 15px;
+}
+
+.card-button-add {
+	padding: 1rem;
+	color: white;
+
+	background: #00EF7E;
+	font-family: Inter;
+
+	font-weight: bold;
+	font-size: 22px;
+
+	text-align: center;
+	margin-right: 2rem;
+}
+.card-button-supp {
+	padding: 1rem;
+
+	color: white;
+
+	background: red;
+	font-family: Inter;
+	font-weight: bold;
+	font-size: 22px;
+	text-align: center;
+}
+
+.money {
+	font-family: "Inter", sans-serif;
+	font-weight: 700;
+	font-size: 24px;
+	max-width: 216px;
+	text-align: right;
+	border: solid 1px black;
+	margin: 1rem;
+}
+.courant {
+	background-color: #fff6d4;
+	max-width: 466px;
+	padding-bottom:1rem;
+}
+
+.name {
+	font-family: "Inter", sans-serif;
+	font-weight: 800;
+	font-size: 18px;
+	margin-bottom: 1rem;
+	margin-top: 1rem;
+	
+}
+.coffre {
+	max-width: 122px;
+	margin-right:15px;
+}
+.illustration {
+	display: flex;
+	flex-direction: column;
+	
+}
+.NumberCoffre{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+.buttonAddSupp {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	
+}
+.indication {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
