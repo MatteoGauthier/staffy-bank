@@ -7,9 +7,10 @@ function Hero() {
 		<div>
 			<img className="Homme" src={PetitHomme} />
 			<div className="conponent">
+				<button className="compte">Accéder à mon compte</button>
 				<h1 className="Titre"> STAFFY BANK </h1>
 				<h3 className="subtitle">
-					“Loin des yeux, <br /> près de vous”
+					“Loin des yeux, près de vous”
 				</h3>
 				<p className="paragraph">
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas donec sit tellus amet ut et nullam. Aliquam
