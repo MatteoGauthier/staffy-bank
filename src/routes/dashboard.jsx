@@ -1,3 +1,4 @@
+import Transactions from "../components/Dashboard/Transactions"
 import useLocalState from "../hooks/useLocalState"
 import { defaultTransactions } from "../mock/data"
 
@@ -7,8 +8,8 @@ export default function Dashboard() {
 
 	return (
 		<main style={{ padding: "1rem 0" }}>
-			<h2>Expenses</h2>
-      
+			<h2>Transaction</h2>
+			<Transactions transactions={transactions} />
 		</main>
 	)
 }
