@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
+body {
+	font-family: "Inter", sans-serif;
+}
+
 .Titre {
 	font-family: "ThunderLC", ThunderLC;
 	font-weight: 800;
@@ -154,7 +158,7 @@
 	padding: 11px 40px;
 	color: white;
 
-	background: #FF3867;
+	background: #ff3867;
 	font-family: Inter;
 	font-style: normal;
 	font-weight: bold;
@@ -164,7 +168,7 @@
 }
 
 .bgRed {
-	background: #FFEEF2;
+	background: #ffeef2;
 	/* height: 100%; */
 	width: 250px;
 	height: 434px;
@@ -176,7 +180,7 @@
 	justify-content: space-between;
 }
 
-.redCard{
+.redCard {
 	/* width: 100%; */
 	position: absolute;
 	inset: 0;
@@ -185,7 +189,7 @@
 	left: 10px;
 }
 
-.greenCard{
+.greenCard {
 	/* width: 100%; */
 	position: absolute;
 	inset: 0;
@@ -195,7 +199,7 @@
 }
 
 .bgGreen {
-	background: #E2FFF1;
+	background: #e2fff1;
 	/* height: 100%; */
 	width: 250px;
 	height: 434px;
@@ -212,7 +216,7 @@
 	padding: 11px 40px;
 	color: white;
 
-	background: #00EF7E;
+	background: #00ef7e;
 	font-family: Inter;
 	font-style: normal;
 	font-weight: bold;

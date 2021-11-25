@@ -1,0 +1,21 @@
+.account-creation-app {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.account-creation-wrapper {
+	max-width: 600px;
+	width: 100%;
+}
+
+.account-creation-wrapper h1 {
+	font-size: 24px;
+	font-weight: 700;
+}
+.creation-input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+

@@ -1,8 +1,9 @@
-import React from 'react';
+import React from "react"
 
 export default function useLocalState(defaultValue, key) {
 	const [value, setValue] = React.useState(() => {
 		const stickyValue = window.localStorage.getItem(key)
+
 		return stickyValue !== null ? JSON.parse(stickyValue) : defaultValue
 	})
 	React.useEffect(() => {
