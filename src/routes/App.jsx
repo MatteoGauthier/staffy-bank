@@ -1,10 +1,11 @@
 import { useState } from "react"
-import logo from "./logo.svg"
-import "./App.css"
+
 import Hero from "./components/Hero"
-import CardBlue from "./components/Landing/CardBlue"
-import CardRed from "./components/Landing/CardRed"
-import CardGreen from "./components/Landing/CardGreen"
+import CardBlue from "../components/Landing/CardBlue"
+import CardRed from "../components/Landing/CardRed"
+import CardGreen from "../components/Landing/CardGreen"
+import { useState } from "react"
+import Hero from "../components/Hero"
 
 function App() {
 	const [count, setCount] = useState(0)
