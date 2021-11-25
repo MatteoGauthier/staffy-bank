@@ -2,20 +2,59 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: center;
+	/* justify-content: center; */
+  height: 100vh;
 }
 
 .account-creation-wrapper {
+  margin-top: 56px;
+  background-color: whitesmoke;
 	max-width: 600px;
 	width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 18px;
+
 }
 
 .account-creation-wrapper h1 {
 	font-size: 24px;
 	font-weight: 700;
 }
-.creation-input-wrapper {
-  display: flex;
-  flex-direction: column;
+.account-creation-wrapper p {
+  text-align: center;
+  margin-bottom: 24px;
+  color:rgb(54, 54, 54);
 }
 
+.creation-input-wrapper {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 12px;align-self: normal;
+}
+
+.creation-input-wrapper label {
+	color: rgb(51, 51, 51);
+	margin-bottom: 4px;
+}
+
+.creation-input-wrapper input {
+	border: solid rgb(126, 126, 126) 1px;
+	border-radius: 6px;
+	max-width: 28rem;
+	padding: 2px 4px;
+  /* width: 100%; */
+}
+
+
+
+.account-creation-wrapper button {
+	background-color: rgb(91, 162, 255);
+	color: white;
+	padding: 8px 16px;
+	border-radius: 8px;
+	/* box shadow */
+	box-shadow: rgb(51 51 51 / 36%) 1px 1px 6px;
+}
