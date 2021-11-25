@@ -1,13 +1,14 @@
 import React from "react"
 import PetitHomme from "../assets/image/PetitHomme.svg"
 import ImageHero from "../assets/image/ImageHero.png"
+import { Link } from 'react-router-dom'
 
 function Hero() {
 	return (
 		<div>
 			<img className="Homme" src={PetitHomme} />
 			<div className="conponent">
-				<button className="compte">Accéder à mon compte</button>
+			<Link to={"../Dashboard"} className="compte">Accéder à mon compte</Link>
 				<h1 className="Titre"> STAFFY BANK </h1>
 				<h3 className="subtitle">
 					“Loin des yeux, près de vous”

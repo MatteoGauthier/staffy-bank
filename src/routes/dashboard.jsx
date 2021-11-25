@@ -1,6 +1,6 @@
 import Transactions from "../components/Dashboard/Transactions"
 import useLocalState from "../hooks/useLocalState"
-import { defaultTransactions } from "../mock/data"
+import { defaultAccounts, defaultTransactions } from "../mock/data"
 
 export default function Dashboard() {
 	const [accounts, setAccounts] = useLocalState(defaultAccounts, "accounts")
