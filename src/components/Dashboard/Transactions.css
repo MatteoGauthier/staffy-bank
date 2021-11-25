@@ -1,0 +1,65 @@
+.transactions-card {
+  max-width: 50%;
+}
+
+.transactions-table {
+	display: table;
+	text-align: left;
+	position: relative;
+	width: 100%;
+	border-collapse: collapse;
+	text-indent: 0;
+	border-color: inherit;
+}
+
+.transactions-table thead {
+  color: white;
+}
+
+.transactions-table tbody tr:nth-child(2n) td,
+.transactions-table tbody tr:nth-child(2n) th {
+	background-color: #eee;
+}
+.transactions-table tbody tr td:first-child,
+.transactions-table tbody tr th:first-child {
+	border-top-left-radius: 0.5rem;
+	border-bottom-left-radius: 0.5rem;
+}
+.transactions-table th:first-child {
+	position: sticky;
+	position: -webkit-sticky;
+	left: 0;
+	z-index: 10;
+}
+.transactions-table tbody td,
+.transactions-table tbody th {
+	background-color: white;
+}
+.transactions-table td,
+.transactions-table th {
+	padding: 1rem;
+	vertical-align: middle;
+	white-space: nowrap;
+}
+
+.transactions-table tfoot td,
+.transactions-table tfoot th,
+.transactions-table thead td,
+.transactions-table thead th {
+	background-color: grey;
+	font-weight: 700;
+	font-size: 0.75rem;
+	line-height: 1rem;
+	text-transform: uppercase;
+}
+
+.amount {
+  font-weight: 600;
+}
+
+.amount-green {
+  color: #2aff6a;
+}
+.amount-red {
+  color: #ff2a2a;
+}
