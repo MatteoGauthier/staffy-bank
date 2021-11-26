@@ -3,20 +3,19 @@
 	flex-direction: column;
 	align-items: center;
 	/* justify-content: center; */
-  height: 100vh;
+	height: 100vh;
 }
 
 .account-creation-wrapper {
-  margin-top: 56px;
-  background-color: whitesmoke;
+	margin-top: 56px;
+	background-color: whitesmoke;
 	max-width: 600px;
 	width: 100%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  padding: 18px;
-
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	padding: 18px;
 }
 
 .account-creation-wrapper h1 {
@@ -24,15 +23,16 @@
 	font-weight: 700;
 }
 .account-creation-wrapper p {
-  text-align: center;
-  margin-bottom: 24px;
-  color:rgb(54, 54, 54);
+	text-align: center;
+	margin-bottom: 24px;
+	color: rgb(54, 54, 54);
 }
 
 .creation-input-wrapper {
 	display: flex;
 	flex-direction: column;
-	margin-bottom: 12px;align-self: normal;
+	margin-bottom: 12px;
+	align-self: normal;
 }
 
 .creation-input-wrapper label {
@@ -40,15 +40,14 @@
 	margin-bottom: 4px;
 }
 
-.creation-input-wrapper input {
+.creation-input-wrapper input,
+.creation-input-wrapper select {
 	border: solid rgb(126, 126, 126) 1px;
 	border-radius: 6px;
 	max-width: 28rem;
 	padding: 2px 4px;
-  /* width: 100%; */
+	/* width: 100%; */
 }
-
-
 
 .account-creation-wrapper button {
 	background-color: rgb(91, 162, 255);
