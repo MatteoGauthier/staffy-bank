@@ -310,3 +310,29 @@ body {
 	flex-direction: column;
 	align-items: center;
 }
+.banner {
+	background-color: #FFD128;
+	height: 100px;
+	
+
+}
+.pdp {
+	max-width: 100px;
+	
+}
+
+.NameSurname {
+
+	font-family: ThunderLC;
+	font-weight: 700;
+	font-size: 40px;
+	line-height: 35px;
+	display: flex;
+	flex-direction: column;
+	
+}
+.container {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}

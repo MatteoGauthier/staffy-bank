@@ -10,6 +10,7 @@ function App() {
 	const [name, setName] = useState("Hello")
 	const [accounts, setAccounts] = useState(defaultAccounts)
 	const [money, setMoney] = useState(0)
+	const [surname, setSurname] = useState("World")
 
 	const context = {
 		name: name,
@@ -17,7 +18,9 @@ function App() {
 		accounts: accounts,
 		setAccounts: setAccounts,
 		money:money,
-		setMoney: setMoney, 
+		setMoney: setMoney,
+		surname: surname,
+		setSurname: setSurname,
 	}
 
 	return (
