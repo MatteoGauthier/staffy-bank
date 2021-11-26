@@ -8,12 +8,15 @@ import Context from "./utils/context"
 function App() {
 	const [name, setName] = useState("Hello")
 	const [accounts, setAccounts] = useState([])
+	const [money, setMoney] = useState(0)
 
 	const context = {
 		name: name,
 		setName: setName,
 		accounts: accounts,
 		setAccounts: setAccounts,
+		money:money,
+		setMoney: setMoney, 
 	}
 
 	return (

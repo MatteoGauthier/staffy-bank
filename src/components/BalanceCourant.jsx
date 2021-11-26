@@ -1,8 +1,13 @@
-import React from "react"
+import React, {useContext} from "react"
 import Coffre from "../assets/image/coffre.png"
+import Context from "../utils/context"
+
+
+
 export default function BalanceCourant() {
 	const [newValue, setNewValue] = React.useState(0)
-	const [money, setMoney] = React.useState(0)
+	const { money, setMoney } = useContext(Context)
+
 	const Addmoney = () => {
 		setMoney(money + newValue)
 	}
