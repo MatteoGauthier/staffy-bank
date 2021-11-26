@@ -7,6 +7,9 @@ export default function Dashboard() {
 	const [accounts, setAccounts] = useLocalState(defaultAccounts, "accounts")
 	const [transactions, setTransactions] = useLocalState(defaultTransactions, "transactions")
 
+	// https://codesandbox.io/s/myrfc
+	// https://ant.design/components/modal/	
+
 	return (
 		<main style={{ padding: "1rem 0" }}>
 			<BalanceCourant />
