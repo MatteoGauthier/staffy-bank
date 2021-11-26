@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
+import useLocalState from "./hooks/useLocalState"
 import { defaultAccounts } from "./mock/data"
 import AccountCreation from "./routes/account-creation"
 import Dashboard from "./routes/dashboard"
@@ -8,9 +9,9 @@ import Context from "./utils/context"
 
 function App() {
 	const [name, setName] = useState("Hello")
-	const [accounts, setAccounts] = useState(defaultAccounts)
 	const [money, setMoney] = useState(0)
 	const [surname, setSurname] = useState("World")
+	const [accounts, setAccounts] = useLocalState(defaultAccounts)
 
 	const context = {
 		name: name,
@@ -21,6 +22,17 @@ function App() {
 		setMoney: setMoney,
 		surname: surname,
 		setSurname: setSurname,
+		mainAccount: accounts.find((account) => account.type === "main"),
+		setMainAccount: (eAcc) => {
+			setAccounts(
+				accounts.map((acc) => {
+					if (acc.type === "main") {
+						return eAcc
+					}
+					return acc
+				})
+			)
+		},
 	}
 
 	return (
