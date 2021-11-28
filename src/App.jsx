@@ -9,6 +9,8 @@ import Context from "./utils/context"
 
 function App() {
 	const [name, setName] = useState("Hello")
+	const [money, setMoney] = useState(0)
+	const [surname, setSurname] = useState("World")
 	const [accounts, setAccounts] = useLocalState(defaultAccounts)
 	const [transactions, setTransactions] = useLocalState(defaultTransactions)
 
@@ -17,6 +19,10 @@ function App() {
 		setName: setName,
 		accounts: accounts,
 		setAccounts: setAccounts,
+		money:money,
+		setMoney: setMoney,
+		surname: surname,
+		setSurname: setSurname,
 		mainAccount: accounts.find((account) => account.type === "main"),
 		setMainAccount: (eAcc) => {
 			setAccounts(
