@@ -15,6 +15,8 @@ export default function BalanceCourant() {
 	const handleChange = (event) => {
 		setNewValue(Number(event.target.value))
 	}
+
+	console.log(accounts)
 	return (
 		<div className="courant">
 			<div className="NumberCoffre">
@@ -22,7 +24,7 @@ export default function BalanceCourant() {
 					<p className="name">Compte courant</p>
 					<img className="coffre" src={Coffre} />
 				</div>
-				<p className="number">{accounts.find((e) => e.type == "main").balance.toFixed(2) + "€"}</p>
+				<p className="number">{mainAccount && mainAccount.balance.toFixed(2) + "€"}</p>
 			</div>
 			<div>
 				<div className="indication">
