@@ -11,8 +11,8 @@ function App() {
 	const [name, setName] = useState("Hello")
 	const [money, setMoney] = useState(0)
 	const [surname, setSurname] = useState("World")
-	const [accounts, setAccounts] = useLocalState(defaultAccounts)
-	const [transactions, setTransactions] = useLocalState(defaultTransactions)
+	const [accounts, setAccounts] = useLocalState(defaultAccounts, "accounts")
+	const [transactions, setTransactions] = useLocalState(defaultTransactions, "transactions")
 
 	const context = {
 		name: name,
