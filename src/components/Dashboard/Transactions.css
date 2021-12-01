@@ -1,5 +1,6 @@
 .transactions-card {
-  max-width: 50%;
+  max-width: 100%;
+	margin-top: 1rem;
 }
 
 .transactions-table {
@@ -18,7 +19,7 @@
 
 .transactions-table tbody tr:nth-child(2n) td,
 .transactions-table tbody tr:nth-child(2n) th {
-	background-color: #eee;
+	background-color: #DAF9FF;
 }
 .transactions-table tbody tr td:first-child,
 .transactions-table tbody tr th:first-child {
@@ -46,11 +47,14 @@
 .transactions-table tfoot th,
 .transactions-table thead td,
 .transactions-table thead th {
-	background-color: grey;
+	background-color: #0BCEF4;
+	border: solid 2px #0fb8da;
+	
 	font-weight: 700;
 	font-size: 0.75rem;
 	line-height: 1rem;
 	text-transform: uppercase;
+	
 }
 
 .amount {
@@ -58,8 +62,62 @@
 }
 
 .amount-green {
-  color: #2aff6a;
+  color: #18cb4e;
 }
 .amount-red {
   color: #ff2a2a;
+}
+.CompteName {
+	font-weight: 600;
+	font-size: 18px;
+}
+.select {
+	border: 2px solid #0fb8da;
+}
+
+.money2 {
+	font-weight: 600;
+	font-size: 16px;
+	border: solid 1px #000000;
+}
+
+.buttonTransfer {
+	background-color: #FF3867;
+	color: #FFFFFF;
+		padding: 6px;
+		font-weight: bold;
+		padding-left: 1rem;
+		padding-right: 1rem;
+		border-radius: 5px;
+		align-items: flex-end;
+	
+		margin-top: 1rem;
+		
+	}
+.principalContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-top: 1rem;
+}
+.transferNumber {
+	display: flex;
+	flex-direction: column;
+	margin-top: 1rem;
+}
+
+.buttonModalTransfer {
+	background-color: #FF3867;
+	color: #FFFFFF;
+		padding: 6px;
+		font-weight: bold;
+		padding-left: 1rem;
+		padding-right: 1rem;
+		border-radius: 5px;
+		align-items: flex-end;
+	margin-left: 6.5rem;
+		margin-top: 1rem;
+		
+	}
 }

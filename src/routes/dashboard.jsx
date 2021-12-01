@@ -12,13 +12,12 @@ export default function Dashboard() {
 	// https://ant.design/components/modal/
 
 	return (
-		<main style={{ padding: "1rem 0" }}>
+		<main style={{  }}>
 			<Profil />
 			<BalanceCourant />
 			<BalanceEpargne />
-			<h2>Transaction</h2>
-			<Transactions  />
 			<TransferBox />
+			<Transactions  />
 		</main>
 	)
 }

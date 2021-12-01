@@ -15,34 +15,43 @@ function Profil() {
 	const submitChange = (event) => {
 		event.preventDefault()
 		const { name, surname } = event.target.elements
-
 		console.log(name, surname)
 
-    
+		setName(name.value)
+		setSurname(surname.value)
 	}
 	return (
 		<div>
 			<div className="banner"></div>
 			<div className="container">
 				<img src={PDP} className="pdp" />
-				<div className="NameSurname">
-					<p>{name}</p>
-					<p>{surname}</p>
+				<div className="containerButton">
+					<div className="NameSurname">
+						<p>{name}</p>
+						<p>{surname}</p>
+					</div>
+			<button className="buttonModal"onClick={openModal}>Modifier</button>
 				</div>
 			</div>
-			<button onClick={openModal}>Open Modal</button>
 			<Modal closeButton aria-labelledby="modal-title" open={visible} onClose={closeModal}>
 				<form onSubmit={submitChange}>
 					<Modal.Header>
 						<h4>hello</h4>
 					</Modal.Header>
 					<Modal.Body>
-						<input type="text" name="name" defaultValue={name} />
-						<input type="text" name="surname" defaultValue={surname} />
+						<input className="inputName" type="text" name="name" defaultValue={name} />
+						<input className="inputName" ntype="text" name="surname" defaultValue={surname} />
 					</Modal.Body>
 					<Modal.Footer>
 						<button type="submit">Valider</button>
-						<button onClick={closeModal}>Fermer</button>
+						<button
+							onClick={(e) => {
+								e.preventDefault()
+								closeModal()
+							}}
+						>
+							Fermer
+						</button>
 					</Modal.Footer>
 				</form>
 			</Modal>

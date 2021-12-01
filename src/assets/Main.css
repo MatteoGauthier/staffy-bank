@@ -229,33 +229,33 @@ body {
 	font-family: "Inter", sans-serif;
 	font-weight: 700;
 	font-size: 50px;
-	max-width: 190px;
+
 	color: #FF3867;
-	margin-left: 15px;
+
 }
 
 .card-button-add {
-	padding: 1rem;
+	padding: 0.5rem;
 	color: white;
 
 	background: #00EF7E;
 	font-family: Inter;
 
 	font-weight: bold;
-	font-size: 22px;
+	font-size: 16px;
 
 	text-align: center;
 	margin-right: 2rem;
 }
 .card-button-supp {
-	padding: 1rem;
+	padding: 0.5rem;
 
 	color: white;
 
 	background: red;
 	font-family: Inter;
 	font-weight: bold;
-	font-size: 22px;
+	font-size: 16px;
 	text-align: center;
 }
 
@@ -267,6 +267,7 @@ body {
 	text-align: right;
 	border: solid 1px black;
 	margin: 1rem;
+	margin-left: 3.5rem;
 }
 .courant {
 	background-color: #fff6d4;
@@ -280,6 +281,7 @@ body {
 	font-size: 18px;
 	margin-bottom: 1rem;
 	margin-top: 1rem;
+
 	
 }
 .coffre {
@@ -289,14 +291,9 @@ body {
 .illustration {
 	display: flex;
 	flex-direction: column;
-	
-}
-.NumberCoffre{
-	display: flex;
-	flex-direction: row;
 	align-items: center;
-	justify-content: center;
 }
+
 
 .buttonAddSupp {
 	display: flex;
@@ -312,7 +309,7 @@ body {
 }
 .banner {
 	background-color: #FFD128;
-	height: 100px;
+	height: 60px;
 	
 
 }
@@ -334,5 +331,51 @@ body {
 .container {
 	display: flex;
 	flex-direction: row;
+	align-items: flex-end;
+	margin-top: -47px;
+	margin-bottom: 2rem;
+}
+
+.savingsBlock {
+	background-color: #FFF6D4;
+	max-width: 100%;
+	display: flex;
+	flex-direction: column;
 	align-items: center;
+	margin-top: 1rem;
+}
+.inputName {
+	border: solid 1px black;
+	padding: 0.5rem;
+	border-radius: 5px;
+}
+.containerButton {
+	display: flex;
+	flex-direction: row;
+	/* ali */
+	align-items: flex-end;;
+	
+}
+
+.buttonModal {
+	border: solid 2px #FFD128;
+	padding: 4px;
+	border-radius: 5px;
+	align-items: flex-end;
+	margin-left: 1rem;
+	margin-bottom: 6px;
+	
+}
+.buttonModalCompte {
+background-color: #FF3867;
+color: #FFFFFF;
+	padding: 6px;
+	font-weight: bold;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	border-radius: 5px;
+	align-items: flex-end;
+
+	margin-top: 1rem;
+	
 }

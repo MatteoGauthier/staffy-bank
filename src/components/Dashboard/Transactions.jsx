@@ -13,11 +13,11 @@ function Transactions() {
 
 	return (
 		<div className="transactions-card">
-			<h3>Transactions</h3>
+			<p>Historique des virements</p>
 			<table className="transactions-table">
 				<thead>
 					<tr>
-						<th>id</th>
+					
 						<th>account</th>
 						<th>description</th>
 						<th>amount</th>
@@ -28,7 +28,7 @@ function Transactions() {
 						// console.log(transaction)
 						return (
 							<tr key={transaction.id}>
-								<td>{transaction.id}</td>
+								
 								<td>{getAccountName(transaction.account)}</td>
 								<td>{transaction.description}</td>
 								<td className={`${transaction.type == "credit" ? "amount-green" : "amount-red"} amount`}>
