@@ -34,6 +34,17 @@ function App() {
 				})
 			)
 		},
+		savingsAccount: accounts.find((account) => account.type === "savings"),
+		setSavingsAccount: (eAcc) => {
+			setAccounts(
+				accounts.map((acc) => {
+					if (acc.type === "savings") {
+						return eAcc
+					}
+					return acc
+				})
+			)
+		},
 		transactions: transactions,
 		setTransactions: setTransactions,
 	}

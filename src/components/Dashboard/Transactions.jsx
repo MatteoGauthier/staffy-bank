@@ -25,7 +25,7 @@ function Transactions() {
 				</thead>
 				<tbody>
 					{transactions.map((transaction) => {
-						console.log(transaction)
+						// console.log(transaction)
 						return (
 							<tr key={transaction.id}>
 								<td>{transaction.id}</td>

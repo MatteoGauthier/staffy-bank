@@ -4,7 +4,7 @@ import Context from "../utils/context"
 
 export default function BalanceCourant() {
 	const [newValue, setNewValue] = React.useState(0)
-	const { accounts, setAccounts, mainAccount, setMainAccount } = useContext(Context)
+	const { accounts, setAccounts, mainAccount, setMainAccount,savingsAccount } = useContext(Context)
 
 	const Addmoney = () => {
 		setMainAccount({ ...mainAccount, balance: mainAccount.balance + newValue })
@@ -16,7 +16,8 @@ export default function BalanceCourant() {
 		setNewValue(Number(event.target.value))
 	}
 
-	console.log(accounts)
+	// console.log(accounts)
+	// console.log(mainAccount);
 	return (
 		<div className="courant">
 			<div className="NumberCoffre">
