@@ -105,7 +105,7 @@ function TransferBox() {
 							</option>
 							{accounts.map((elm) => {
 								return (
-									<option key={elm.name} value={elm.id}>
+									<option key={elm.id} value={elm.id}>
 										{elm.name}
 									</option>
 								)
@@ -124,7 +124,7 @@ function TransferBox() {
 							</option>
 							{accounts.map((elm) => {
 								return (
-									<option hidden={sender == elm.id} key={elm.name} value={elm.id}>
+									<option hidden={sender == elm.id} key={elm.id} value={elm.id}>
 										{elm.name}
 									</option>
 								)
