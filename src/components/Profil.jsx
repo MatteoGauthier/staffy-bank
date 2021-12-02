@@ -2,15 +2,12 @@ import React, { useContext, useState } from "react"
 import PDP from "../assets/image/PDP.png"
 import Context from "../utils/context"
 import Modal from "@nextui-org/react/modal"
-import CardBleu from "../assets/image/Bluecard.png"
-import CardGreen from "../assets/image/GreenCard.png"
-import CardRed from "../assets/image/RedCard.png"
-
-
+import CardBlueImg from "../assets/image/Bluecard.png"
+import CardGreenImg from "../assets/image/GreenCard.png"
+import CardRedImg from "../assets/image/RedCard.png"
 
 function Profil() {
-
-	const { name, setName, surname, setSurname, card, setCard  } = useContext(Context)
+	const { name, setName, surname, setSurname, card, setCard } = useContext(Context)
 	const [visible, setVisible] = React.useState(false)
 	const openModal = () => setVisible(true)
 	const closeModal = () => {
@@ -27,18 +24,26 @@ function Profil() {
 		setSurname(surname.value)
 	}
 
-	const ColorCard = (event) => {
-		if (event.target.value === "CardBleu") {
-			return CardBleu
+	const ColorCard = () => {
+		let tempImg = CardGreenImg
+		if (card === "blue") {
+			tempImg = CardBlueImg
 		}
+		if (card === "red") {
+			tempImg = CardRedImg
+		}
+		if (card === "green") {
+			tempImg = CardGreenImg
+		}
+		return <img src={tempImg} alt="card" />
 	}
-	
+
 	return (
 		<div>
 			<div className="banner"></div>
 			<div className="container">
 				<img src={PDP} className="pdp" />
-				<div className="containerButton">s
+				<div className="containerButton">
 					<div className="NameSurname">
 						<p>{name}</p>
 						<p>{surname}</p>
@@ -48,7 +53,7 @@ function Profil() {
 					</button>
 				</div>
 			</div>
-				<img className="" src={CardBleu} />
+			{ColorCard()}
 			<Modal closeButton aria-labelledby="modal-title" open={visible} onClose={closeModal}>
 				<form onSubmit={submitChange}>
 					<Modal.Header>
@@ -56,7 +61,7 @@ function Profil() {
 					</Modal.Header>
 					<Modal.Body>
 						<input className="inputName" type="text" name="name" defaultValue={name} />
-						<input className="inputName" ntype="text" name="surname" defaultValue={surname} />
+						<input className="inputName" type="text" name="surname" defaultValue={surname} />
 					</Modal.Body>
 					<Modal.Footer>
 						<button type="submit">Valider</button>

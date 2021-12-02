@@ -9,9 +9,9 @@ import Home from "./routes/home"
 import Context from "./utils/context"
 
 function App() {
+	const [card, setCard] = useLocalState("green", "card")
 	const [name, setName] = useLocalState("Hello", "name")
 	const [surname, setSurname] = useLocalState("World", "surname")
-	const [card, setCard] = useLocalState("green", "card")
 	const [accounts, setAccounts] = useLocalState(defaultAccounts, "accounts")
 	const [transactions, setTransactions] = useLocalState(defaultTransactions, "transactions")
 
@@ -22,8 +22,6 @@ function App() {
 		setCard: setCard,
 		accounts: accounts,
 		setAccounts: setAccounts,
-		card,
-		setCard,
 		surname: surname,
 		setSurname: setSurname,
 		mainAccount: accounts.find((account) => account.type === "main"),
