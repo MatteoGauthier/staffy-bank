@@ -1,9 +1,6 @@
 import React from "react"
 import CardBleu from "../../assets/image/Bluecard.png"
-
-
-
-export default function CardBlue() {
+export default function CardBlue({handleClick}) {
 	return (
 		<div className="card">
 			<img className="BlueCard" src={CardBleu} />
@@ -35,9 +32,9 @@ export default function CardBlue() {
 							<span>Achat à l’étrangé</span>
 						</div>
 					</div>
-					<div className="card-button">
+					<button onClick={handleClick} className="card-button">
 						<p className="text-xl font-bold text-white">Choose it !</p>
-					</div>
+					</button>
 				</div>
 				<svg width={100} height={181} fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path
