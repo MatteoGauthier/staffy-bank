@@ -42,7 +42,7 @@ function TransferBox() {
 
 	const handleSubmit = (event) => {
 		event.preventDefault()
-		const { amount } = event.target.elements
+		const { amount, description } = event.target.elements
 
 		const transferTransactions = transactions
 		const transfer = accounts.map((account) => {
@@ -56,7 +56,7 @@ function TransferBox() {
 					account: account.id,
 					amount: Number(amount.value),
 					type: "credit",
-					description: "edit that",
+					description: description.value,
 					date: new Date(),
 				})
 
@@ -72,7 +72,7 @@ function TransferBox() {
 					account: account.id,
 					amount: -Number(amount.value),
 					type: "debit",
-					description: "edit that",
+					description: description.value,
 					date: new Date(),
 				})
 				return {
@@ -85,6 +85,7 @@ function TransferBox() {
 		})
 		setTransactions(transferTransactions)
 		setAccounts(transfer)
+		closeModal()
 	}
 
 	return (
@@ -131,7 +132,22 @@ function TransferBox() {
 							})}
 						</select>
 						<div className="transferNumber">
-							<input className="money2" type="text" name="amount" placeholder="montant" />
+							<label className="CompteName" htmlFor="amount">
+								Montant
+							</label>
+							<input className="select" id="amount" type="number" name="amount" placeholder="montant" />
+						</div>
+						<div className="transferNumber">
+							<label className="CompteName" htmlFor="description">
+								Description
+							</label>
+							<input
+								className="select"
+								id="description"
+								type="text"
+								name="description"
+								placeholder="Virement pour mamie, merci mamie"
+							/>
 						</div>
 					</Modal.Body>
 					<Modal.Footer>
