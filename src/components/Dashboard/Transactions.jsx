@@ -13,7 +13,7 @@ function Transactions() {
 
 	return (
 		<div className="transactions-card">
-			<p>Historique des virements</p>
+			<p className="historique">Historique des virements</p>
 			<table className="transactions-table">
 				<thead>
 					<tr>
