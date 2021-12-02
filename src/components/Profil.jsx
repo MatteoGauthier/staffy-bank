@@ -2,9 +2,15 @@ import React, { useContext, useState } from "react"
 import PDP from "../assets/image/PDP.png"
 import Context from "../utils/context"
 import Modal from "@nextui-org/react/modal"
+import CardBleu from "../assets/image/Bluecard.png"
+import CardGreen from "../assets/image/GreenCard.png"
+import CardRed from "../assets/image/RedCard.png"
+
+
 
 function Profil() {
-	const { name, setName, surname, setSurname } = useContext(Context)
+
+	const { name, setName, surname, setSurname, card, setCard  } = useContext(Context)
 	const [visible, setVisible] = React.useState(false)
 	const openModal = () => setVisible(true)
 	const closeModal = () => {
@@ -20,19 +26,29 @@ function Profil() {
 		setName(name.value)
 		setSurname(surname.value)
 	}
+
+	const ColorCard = (event) => {
+		if (event.target.value === "CardBleu") {
+			return CardBleu
+		}
+	}
+	
 	return (
 		<div>
 			<div className="banner"></div>
 			<div className="container">
 				<img src={PDP} className="pdp" />
-				<div className="containerButton">
+				<div className="containerButton">s
 					<div className="NameSurname">
 						<p>{name}</p>
 						<p>{surname}</p>
 					</div>
-			<button className="buttonModal"onClick={openModal}>Modifier</button>
+					<button className="buttonModal" onClick={openModal}>
+						Modifier
+					</button>
 				</div>
 			</div>
+				<img className="" src={CardBleu} />
 			<Modal closeButton aria-labelledby="modal-title" open={visible} onClose={closeModal}>
 				<form onSubmit={submitChange}>
 					<Modal.Header>

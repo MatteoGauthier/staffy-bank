@@ -230,15 +230,14 @@ body {
 	font-weight: 700;
 	font-size: 50px;
 
-	color: #FF3867;
-
+	color: #ff3867;
 }
 
 .card-button-add {
 	padding: 0.5rem;
 	color: white;
 
-	background: #00EF7E;
+	background: #00ef7e;
 	font-family: Inter;
 
 	font-weight: bold;
@@ -272,7 +271,7 @@ body {
 .courant {
 	background-color: #fff6d4;
 	max-width: 466px;
-	padding-bottom:1rem;
+	padding-bottom: 1rem;
 }
 
 .name {
@@ -281,12 +280,10 @@ body {
 	font-size: 18px;
 	margin-bottom: 1rem;
 	margin-top: 1rem;
-
-	
 }
 .coffre {
 	max-width: 122px;
-	margin-right:15px;
+	margin-right: 15px;
 }
 .illustration {
 	display: flex;
@@ -294,13 +291,11 @@ body {
 	align-items: center;
 }
 
-
 .buttonAddSupp {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	justify-content: center;
-	
 }
 .indication {
 	display: flex;
@@ -308,25 +303,20 @@ body {
 	align-items: center;
 }
 .banner {
-	background-color: #FFD128;
+	background-color: #ffd128;
 	height: 60px;
-	
-
 }
 .pdp {
 	max-width: 100px;
-	
 }
 
 .NameSurname {
-
 	font-family: ThunderLC;
 	font-weight: 700;
 	font-size: 40px;
 	line-height: 35px;
 	display: flex;
 	flex-direction: column;
-	
 }
 .container {
 	display: flex;
@@ -337,7 +327,7 @@ body {
 }
 
 .savingsBlock {
-	background-color: #FFF6D4;
+	background-color: #fff6d4;
 	max-width: 100%;
 	display: flex;
 	flex-direction: column;
@@ -353,22 +343,20 @@ body {
 	display: flex;
 	flex-direction: row;
 	/* ali */
-	align-items: flex-end;;
-	
+	align-items: flex-end;
 }
 
 .buttonModal {
-	border: solid 2px #FFD128;
+	border: solid 2px #ffd128;
 	padding: 4px;
 	border-radius: 5px;
 	align-items: flex-end;
 	margin-left: 1rem;
 	margin-bottom: 6px;
-	
 }
 .buttonModalCompte {
-background-color: #FF3867;
-color: #FFFFFF;
+	background-color: #ff3867;
+	color: #ffffff;
 	padding: 6px;
 	font-weight: bold;
 	padding-left: 1rem;
@@ -377,5 +365,21 @@ color: #FFFFFF;
 	align-items: flex-end;
 
 	margin-top: 1rem;
-	
+}
+
+.footerText {
+	font-family: "ThunderLC", ThunderLC;
+	font-weight: 900;
+	font-size: 50px;
+	text-align: center;
+	color: #FFFFFF;
+}
+.divFooter {
+	background-color: #ffd128;
+	height: 80px;
+	width: 100%;
+
+}
+.ChooseImage{
+	align-content: center;
 }

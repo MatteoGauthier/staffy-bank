@@ -11,7 +11,7 @@ function Hero() {
 			<Link to={"../Dashboard"} className="compte">Accéder à mon compte</Link>
 				<h1 className="Titre"> STAFFY BANK </h1>
 				<h3 className="subtitle">
-					“Loin des yeux, près de vous”
+					“Lorem ipsum dolor sit amet”
 				</h3>
 				<p className="paragraph">
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas donec sit tellus amet ut et nullam. Aliquam

@@ -1,6 +1,7 @@
 import { useContext, useState } from "react"
 
 import CardBlue from "../components/Landing/CardBlue"
+import Footer from "../components/Landing/footer"
 import CardRed from "../components/Landing/CardRed"
 import CardGreen from "../components/Landing/CardGreen"
 import Hero from "../components/Hero"
@@ -17,6 +18,7 @@ function Home() {
 				<CardRed />
 				<CardGreen />
 			</div>
+			<Footer />
 		</div>
 	)
 }

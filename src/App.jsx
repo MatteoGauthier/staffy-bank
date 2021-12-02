@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
+import CardBlue from "./components/Landing/CardBlue"
 import useLocalState from "./hooks/useLocalState"
 import { defaultAccounts, defaultTransactions } from "./mock/data"
 import AccountCreation from "./routes/account-creation"
@@ -9,6 +10,7 @@ import Context from "./utils/context"
 
 function App() {
 	const [name, setName] = useState("Hello")
+	const [card, setCard] = useState(CardBlue)
 	const [money, setMoney] = useState(0)
 	const [surname, setSurname] = useState("World")
 	const [accounts, setAccounts] = useLocalState(defaultAccounts, "accounts")
@@ -17,6 +19,8 @@ function App() {
 	const context = {
 		name: name,
 		setName: setName,
+		card: card,
+		setCard: setCard,
 		accounts: accounts,
 		setAccounts: setAccounts,
 		money:money,
