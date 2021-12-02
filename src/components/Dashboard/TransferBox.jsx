@@ -42,12 +42,14 @@ function TransferBox() {
 
 	const handleSubmit = (event) => {
 		event.preventDefault()
-
 		const { amount } = event.target.elements
 
 		const transferTransactions = transactions
 		const transfer = accounts.map((account) => {
-			if (account.id === sender.value) {
+			console.log("account log from map accounts", account)
+
+			if (account.id === sender) {
+				console.log("Débiter")
 				// Débiter le compte du sender
 				transferTransactions.push({
 					id: nanoid(),
@@ -62,9 +64,10 @@ function TransferBox() {
 					...account,
 					balance: Number(account.balance - parseInt(amount.value)),
 				}
-			} else if (account.id === receiver.value) {
+			} else if (account.id === receiver) {
+				console.log("Créditer")
 				// Créditer le compte du receiver
-				transactions.push({
+				transferTransactions.push({
 					id: nanoid(),
 					account: account.id,
 					amount: -Number(amount.value),
@@ -80,10 +83,9 @@ function TransferBox() {
 				return account
 			}
 		})
-
+		setTransactions(transferTransactions)
 		setAccounts(transfer)
 	}
-
 
 	return (
 		<div>
