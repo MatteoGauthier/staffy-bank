@@ -96,6 +96,7 @@ function TransferBox() {
 
 	const submitChange = (event) => {
 		event.preventDefault()
+		closeModal()
 		const { sender, receiver } = event.target.elements
 		console.log(name, surname)
 

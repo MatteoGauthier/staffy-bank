@@ -18,6 +18,7 @@ function Profil() {
 	const submitChange = (event) => {
 		event.preventDefault()
 		const { name, surname } = event.target.elements
+	closeModal()
 		console.log(name, surname)
 
 		setName(name.value)
