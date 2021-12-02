@@ -26,6 +26,13 @@ function TransferBox() {
 	const [receiver, setReceiver] = React.useState("")
 	const { accounts, setAccounts, mainAccount, savingsAccount, setTransactions, transactions } = useContext(Context)
 
+	const [visible, setVisible] = React.useState(false)
+	const openModal = () => setVisible(true)
+	const closeModal = () => {
+		setVisible(false)
+		console.log("closed")
+	}
+
 	const handleChangeSender = (event) => {
 		setSender(event.target.value)
 	}
@@ -36,17 +43,7 @@ function TransferBox() {
 	const handleSubmit = (event) => {
 		event.preventDefault()
 
-		const { amount, sender, receiver } = event.target.elements
-
-		if (amount.value === "") {
-			return alert("Veuillez entrer un montant")
-		}
-		if (sender.value === "") {
-			return alert("Veuillez entrer un sender")
-		}
-		if (receiver.value === "") {
-			return alert("Veuillez entrer un receiver")
-		}
+		const { amount } = event.target.elements
 
 		const transferTransactions = transactions
 		const transfer = accounts.map((account) => {
@@ -87,72 +84,24 @@ function TransferBox() {
 		setAccounts(transfer)
 	}
 
-	const [visible, setVisible] = React.useState(false)
-	const openModal = () => setVisible(true)
-	const closeModal = () => {
-		setVisible(false)
-		console.log("closed")
-	}
 
-	const submitChange = (event) => {
-		event.preventDefault()
-		const { sender, receiver } = event.target.elements
-		console.log(name, surname)
 
-		setSender(sender.value)
-		setReceiver(receiver.value)
-	}
 	return (
 		<div>
-			{/* <div className="transfer-box">
-			<form onSubmit={handleSubmit}>
-				<div className="principalContainer">
-					<div>
-						<p className="CompteName">Compte à débiter</p>
-						<select className="select" name="sender" onChange={handleChangeSender} value={sender}>
-							{accounts.map((elm) => {
-								return (
-									<option key={elm.name} value={elm.id}>
-										{elm.name}
-									</option>
-								)
-							})}
-						</select>
-					</div>
-					<div>
-						<p className="CompteName">Compte à créditer</p>
-						<select
-							className="select"
-							name="receiver"
-							onChange={handleChangeReceiver}
-							disabled={sender == ""}
-							value={receiver}
-						>
-							{accounts.map((elm) => {
-								return (
-									<option disabled={sender == elm.id} key={elm.name} value={elm.id}>
-										{elm.name}
-									</option>
-								)
-							})}
-						</select>
-					</div>
-					<div className="transferNumber">
-						<input className="money2" type="text" name="amount" placeholder="montant" />
-						
-					</div>
-				</div>
-			</form>
-		</div> */}
-<button className="buttonModalTransfer"onClick={openModal}>Effectuer un virement</button>
+			<button className="buttonModalTransfer" onClick={openModal}>
+				Effectuer un virement
+			</button>
 			<Modal closeButton aria-labelledby="modal-title" open={visible} onClose={closeModal}>
-				<form onSubmit={submitChange}>
+				<form onSubmit={handleSubmit}>
 					<Modal.Header>
 						<h4>Faire un virement</h4>
 					</Modal.Header>
 					<Modal.Body>
 						<p className="CompteName">Compte à débiter</p>
-						<select className="select" name="sender" onChange={handleChangeSender} value={sender}>
+						<select className="select" name="sender" onChange={handleChangeSender} defaultValue={sender}>
+							<option disabled value="">
+								Choisissez le compte à débiter
+							</option>
 							{accounts.map((elm) => {
 								return (
 									<option key={elm.name} value={elm.id}>
@@ -167,11 +116,14 @@ function TransferBox() {
 							name="receiver"
 							onChange={handleChangeReceiver}
 							disabled={sender == ""}
-							value={receiver}
+							defaultValue={receiver}
 						>
+							<option disabled value="">
+								Choisissez le compte à créditer
+							</option>
 							{accounts.map((elm) => {
 								return (
-									<option disabled={sender == elm.id} key={elm.name} value={elm.id}>
+									<option hidden={sender == elm.id} key={elm.name} value={elm.id}>
 										{elm.name}
 									</option>
 								)
@@ -182,7 +134,7 @@ function TransferBox() {
 						</div>
 					</Modal.Body>
 					<Modal.Footer>
-						<button className="buttonTransfer" type="submit" onClick={() => {}}>
+						<button className="buttonTransfer" type="submit">
 							Envoyer
 						</button>
 					</Modal.Footer>
