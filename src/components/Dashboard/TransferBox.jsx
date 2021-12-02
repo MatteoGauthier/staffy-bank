@@ -85,7 +85,6 @@ function TransferBox() {
 	}
 
 
-
 	return (
 		<div>
 			<button className="buttonModalTransfer" onClick={openModal}>
