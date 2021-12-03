@@ -24,6 +24,7 @@ export default function BalanceCourant() {
 	}
 	const submitChange = (event) => {
 		event.preventDefault()
+		closeModal()
 		const { mainAccount } = event.target.elements
 	
 

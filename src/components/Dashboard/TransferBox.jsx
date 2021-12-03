@@ -41,6 +41,7 @@ function TransferBox() {
 	}
 
 	const handleSubmit = (event) => {
+		closeModal()
 		event.preventDefault()
 
 		const { amount } = event.target.elements
