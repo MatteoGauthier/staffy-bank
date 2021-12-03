@@ -16,7 +16,7 @@ export default function BalanceCourant() {
 	const handleChange = (event) => {
 		setNewValue(Number(event.target.value))
 	}
-	const [visible, setVisible] = React.useState(false)
+	const [visible, setVisible] = useState(false)
 	const openModal = () => setVisible(true)
 	const closeModal = () => {
 		setVisible(false)

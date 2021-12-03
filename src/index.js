@@ -1,10 +1,9 @@
-
 import ReactDOM from "react-dom"
-import "./index.css"
+import "@unocss/reset/tailwind.css"
+import React from "react"
 
 import "./assets/Main.css"
 import "./assets/fonts.css"
-import "@unocss/reset/tailwind.css"
 import App from "./App"
 
 ReactDOM.render(

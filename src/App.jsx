@@ -10,8 +10,8 @@ import Context from "./utils/context"
 
 function App() {
 	const [card, setCard] = useLocalState("green", "card")
-	const [name, setName] = useLocalState("Hello", "name")
-	const [surname, setSurname] = useLocalState("World", "surname")
+	const [name, setName] = useLocalState("Clément", "name")
+	const [surname, setSurname] = useLocalState("Borget", "surname")
 	const [accounts, setAccounts] = useLocalState(defaultAccounts, "accounts")
 	const [transactions, setTransactions] = useLocalState(defaultTransactions, "transactions")
 

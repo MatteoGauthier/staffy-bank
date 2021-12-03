@@ -1,4 +1,4 @@
-import { useContext } from "react"
+import { useContext, useState } from "react"
 import Context from "../../utils/context"
 import { nanoid } from "nanoid"
 import Modal from "@nextui-org/react/modal"
@@ -22,11 +22,11 @@ const defaultAccounts = [
 ]
 
 function TransferBox() {
-	const [sender, setSender] = React.useState("")
-	const [receiver, setReceiver] = React.useState("")
+	const [sender, setSender] = useState("")
+	const [receiver, setReceiver] = useState("")
 	const { accounts, setAccounts, mainAccount, savingsAccount, setTransactions, transactions } = useContext(Context)
 
-	const [visible, setVisible] = React.useState(false)
+	const [visible, setVisible] = useState(false)
 	const openModal = () => setVisible(true)
 	const closeModal = () => {
 		setVisible(false)
