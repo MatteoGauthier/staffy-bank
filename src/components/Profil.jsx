@@ -36,7 +36,7 @@ function Profil() {
 		if (card === "green") {
 			tempImg = CardGreenImg
 		}
-		return <img src={tempImg} alt="card" />
+		return <img style={{ margin: "0 auto" }} src={tempImg} alt="card" />
 	}
 
 	return (

@@ -37,6 +37,12 @@ function Transactions() {
 					})}
 				</tbody>
 			</table>
+
+			{transactions.length < 1 && (
+				<div style={{ display: "flex", alignItems: "center", justifyContent: "center", height: 130 }}>
+					<span style={{ margin: "0 auto" }}>No transactions</span>
+				</div>
+			)}
 		</div>
 	)
 }

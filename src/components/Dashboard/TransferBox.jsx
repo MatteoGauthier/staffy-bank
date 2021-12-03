@@ -1,33 +1,18 @@
-import { useContext, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import Context from "../../utils/context"
 import { nanoid } from "nanoid"
 import Modal from "@nextui-org/react/modal"
 
-const defaultAccounts = [
-	{
-		name: "Courant",
-		value: "courant",
-		type: "main",
-	},
-	{
-		name: "epargne",
-		value: "epargne",
-		type: "savings",
-	},
-	{
-		name: "Cryptomonnaie",
-		value: "crypto",
-		type: "savings",
-	},
-]
-
 function TransferBox() {
 	const [sender, setSender] = useState("")
 	const [receiver, setReceiver] = useState("")
+	const [error, setError] = useState(true)
 	const { accounts, setAccounts, mainAccount, savingsAccount, setTransactions, transactions } = useContext(Context)
 
 	const [visible, setVisible] = useState(false)
-	const openModal = () => setVisible(true)
+	const openModal = () => {
+		setVisible(true)
+	}
 	const closeModal = () => {
 		setVisible(false)
 		console.log("closed")
@@ -41,7 +26,7 @@ function TransferBox() {
 	}
 
 	const handleSubmit = (event) => {
-		closeModal()
+		setError(false)
 		event.preventDefault()
 		const { amount, description } = event.target.elements
 
@@ -50,20 +35,25 @@ function TransferBox() {
 			console.log("account log from map accounts", account)
 
 			if (account.id === sender) {
-				console.log("Débiter")
-				// Débiter le compte du sender
-				transferTransactions.push({
-					id: nanoid(),
-					account: account.id,
-					amount: Number(amount.value),
-					type: "credit",
-					description: description.value,
-					date: new Date(),
-				})
+				if (account.balance - amount.value < 0) {
+					setError(true)
+					return
+				} else {
+					console.log("Débiter")
+					// Débiter le compte du sender
+					transferTransactions.push({
+						id: nanoid(),
+						account: account.id,
+						amount: Number(amount.value),
+						type: "credit",
+						description: description.value,
+						date: new Date(),
+					})
 
-				return {
-					...account,
-					balance: Number(account.balance - parseInt(amount.value)),
+					return {
+						...account,
+						balance: Number(account.balance - parseInt(amount.value)),
+					}
 				}
 			} else if (account.id === receiver) {
 				console.log("Créditer")
@@ -88,6 +78,10 @@ function TransferBox() {
 		setAccounts(transfer)
 		closeModal()
 	}
+
+	useEffect(() => {
+		setError(false)
+	}, [error])
 
 	return (
 		<div>
@@ -158,6 +152,8 @@ function TransferBox() {
 								placeholder="Virement pour mamie, merci mamie"
 							/>
 						</div>
+
+						<div style={{ color: "red" }}>{error && "Vous n'avez pas assez d'argent sur votre compte"}</div>
 					</Modal.Body>
 					<Modal.Footer>
 						<button className="buttonTransfer" type="submit">

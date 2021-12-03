@@ -30,7 +30,7 @@ export default function BalanceCourant() {
 			<div className="">
 				<div className="illustration">
 					<p className="name">Compte courant</p>
-					<p className="number">{mainAccount && mainAccount.balance.toFixed(2) + "€"}</p>
+					<p className="number">{mainAccount && mainAccount.balance.toFixed(2) + "$"}</p>
 					<button className="buttonModal" onClick={openModal}>
 						Modifier
 					</button>

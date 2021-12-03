@@ -8,7 +8,7 @@ export default function BalanceEpargne() {
 	return (
 		<div className="savingsBlock">
 			<p className="name ">Compte épargne</p>
-			<p className="number">{savingsAccount && savingsAccount.balance.toFixed(2) + "€"}</p>
+			<p className="number">{savingsAccount && savingsAccount.balance.toFixed(2) + "$"}</p>
 		</div>
 	)
 }

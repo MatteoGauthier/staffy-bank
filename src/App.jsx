@@ -24,7 +24,10 @@ function App() {
 		setAccounts: setAccounts,
 		surname: surname,
 		setSurname: setSurname,
-		mainAccount: accounts.find((account) => account.type === "main"),
+		mainAccount: accounts.find((account) => {
+			console.log(account)
+			return account.type == "main"
+		}),
 		setMainAccount: (eAcc) => {
 			setAccounts(
 				accounts.map((acc) => {
