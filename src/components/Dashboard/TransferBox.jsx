@@ -43,19 +43,21 @@ function TransferBox() {
 	const handleSubmit = (event) => {
 		closeModal()
 		event.preventDefault()
-
-		const { amount } = event.target.elements
+		const { amount, description } = event.target.elements
 
 		const transferTransactions = transactions
 		const transfer = accounts.map((account) => {
-			if (account.id === sender.value) {
+			console.log("account log from map accounts", account)
+
+			if (account.id === sender) {
+				console.log("Débiter")
 				// Débiter le compte du sender
 				transferTransactions.push({
 					id: nanoid(),
 					account: account.id,
 					amount: Number(amount.value),
 					type: "credit",
-					description: "edit that",
+					description: description.value,
 					date: new Date(),
 				})
 
@@ -63,14 +65,15 @@ function TransferBox() {
 					...account,
 					balance: Number(account.balance - parseInt(amount.value)),
 				}
-			} else if (account.id === receiver.value) {
+			} else if (account.id === receiver) {
+				console.log("Créditer")
 				// Créditer le compte du receiver
-				transactions.push({
+				transferTransactions.push({
 					id: nanoid(),
 					account: account.id,
 					amount: -Number(amount.value),
 					type: "debit",
-					description: "edit that",
+					description: description.value,
 					date: new Date(),
 				})
 				return {
@@ -81,10 +84,10 @@ function TransferBox() {
 				return account
 			}
 		})
-
+		setTransactions(transferTransactions)
 		setAccounts(transfer)
+		closeModal()
 	}
-
 
 	return (
 		<div>
@@ -104,7 +107,7 @@ function TransferBox() {
 							</option>
 							{accounts.map((elm) => {
 								return (
-									<option key={elm.name} value={elm.id}>
+									<option key={elm.id} value={elm.id}>
 										{elm.name}
 									</option>
 								)
@@ -123,14 +126,29 @@ function TransferBox() {
 							</option>
 							{accounts.map((elm) => {
 								return (
-									<option hidden={sender == elm.id} key={elm.name} value={elm.id}>
+									<option hidden={sender == elm.id} key={elm.id} value={elm.id}>
 										{elm.name}
 									</option>
 								)
 							})}
 						</select>
 						<div className="transferNumber">
-							<input className="money2" type="text" name="amount" placeholder="montant" />
+							<label className="CompteName" htmlFor="amount">
+								Montant
+							</label>
+							<input className="select" id="amount" type="number" name="amount" placeholder="montant" />
+						</div>
+						<div className="transferNumber">
+							<label className="CompteName" htmlFor="description">
+								Description
+							</label>
+							<input
+								className="select"
+								id="description"
+								type="text"
+								name="description"
+								placeholder="Virement pour mamie, merci mamie"
+							/>
 						</div>
 					</Modal.Body>
 					<Modal.Footer>
