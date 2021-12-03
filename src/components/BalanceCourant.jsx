@@ -1,10 +1,10 @@
-import React, { useContext } from "react"
+import { useContext, useState } from "react"
 import Modal from "@nextui-org/react/modal"
 
 import Context from "../utils/context"
 
 export default function BalanceCourant() {
-	const [newValue, setNewValue] = React.useState(0)
+	const [newValue, setNewValue] = useState(0)
 	const { accounts, setAccounts, mainAccount, setMainAccount, savingsAccount } = useContext(Context)
 
 	const Addmoney = () => {

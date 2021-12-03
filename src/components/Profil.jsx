@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react"
+import { useContext, useState } from "react"
 import PDP from "../assets/image/PDP.png"
 import Context from "../utils/context"
 import Modal from "@nextui-org/react/modal"
@@ -8,7 +8,7 @@ import CardRedImg from "../assets/image/RedCard.png"
 
 function Profil() {
 	const { name, setName, surname, setSurname, card, setCard } = useContext(Context)
-	const [visible, setVisible] = React.useState(false)
+	const [visible, setVisible] = useState(false)
 	const openModal = () => setVisible(true)
 	const closeModal = () => {
 		setVisible(false)
@@ -18,7 +18,7 @@ function Profil() {
 	const submitChange = (event) => {
 		event.preventDefault()
 		const { name, surname } = event.target.elements
-	closeModal()
+		closeModal()
 		console.log(name, surname)
 
 		setName(name.value)

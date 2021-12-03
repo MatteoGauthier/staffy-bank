@@ -1,4 +1,4 @@
-import React from "react"
+
 import CardBleu from "../../assets/image/Bluecard.png"
 export default function CardBlue({handleClick}) {
 	return (

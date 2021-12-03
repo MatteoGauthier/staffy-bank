@@ -1,4 +1,4 @@
-import React from "react"
+
 export default function CardGreen() {
 	return (
 		<div className="divFooter">

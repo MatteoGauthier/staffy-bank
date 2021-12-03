@@ -1,4 +1,4 @@
-import React, { useContext } from "react"
+import { useContext } from "react"
 import "./Transactions.css"
 import { defaultAccounts } from "../../mock/data"
 import Context from "../../utils/context"
@@ -17,7 +17,6 @@ function Transactions() {
 			<table className="transactions-table">
 				<thead>
 					<tr>
-					
 						<th>account</th>
 						<th>description</th>
 						<th>amount</th>
@@ -28,7 +27,6 @@ function Transactions() {
 						// console.log(transaction)
 						return (
 							<tr key={transaction.id}>
-								
 								<td>{getAccountName(transaction.account)}</td>
 								<td>{transaction.description}</td>
 								<td className={`${transaction.type == "credit" ? "amount-green" : "amount-red"} amount`}>

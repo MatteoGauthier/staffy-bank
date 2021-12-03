@@ -1,4 +1,4 @@
-import React from "react"
+
 import RedCard from "../../assets/image/RedCard.png"
 export default function CardRed({ handleClick }) {
 	return (

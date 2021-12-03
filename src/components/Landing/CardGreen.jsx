@@ -1,4 +1,4 @@
-import React from "react"
+
 import GreenCard from "../../assets/image/GreenCard.png"
 export default function CardGreen({handleClick}) {
 	return (

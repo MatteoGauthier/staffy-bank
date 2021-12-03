@@ -1,4 +1,4 @@
-import React, { useContext } from "react"
+import { useContext } from "react"
 import Context from "../../utils/context"
 import { nanoid } from "nanoid"
 import Modal from "@nextui-org/react/modal"

@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import { useState } from "react"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import CardBlue from "./components/Landing/CardBlue"
 import useLocalState from "./hooks/useLocalState"

@@ -9,4 +9,7 @@ export default defineConfig({
 	build: {
 		outDir: "build",
 	},
+	esbuild: {
+		jsxInject: `import React from 'react'`,
+	},
 })
