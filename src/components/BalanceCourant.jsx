@@ -9,9 +9,11 @@ export default function BalanceCourant() {
 
 	const Addmoney = () => {
 		setMainAccount({ ...mainAccount, balance: mainAccount.balance + newValue })
+		closeModal()
 	}
 	const Substractmoney = () => {
 		setMainAccount({ ...mainAccount, balance: mainAccount.balance - newValue })
+		closeModal()
 	}
 	const handleChange = (event) => {
 		setNewValue(Number(event.target.value))
@@ -40,7 +42,7 @@ export default function BalanceCourant() {
 					<h4>Modifier mon solde</h4>
 				</Modal.Header>
 				<Modal.Body>
-					<input className="money" name="amount" type="number" onChange={handleChange}></input>
+					<input className="money" name="amount" autoComplete="off" placeholder="100" type="number" onChange={handleChange}></input>
 				</Modal.Body>
 				<Modal.Footer>
 					<button className="card-button-add" onClick={Addmoney}>

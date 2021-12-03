@@ -136,7 +136,14 @@ function TransferBox() {
 							<label className="CompteName" htmlFor="amount">
 								Montant
 							</label>
-							<input className="select" id="amount" type="number" name="amount" placeholder="montant" />
+							<input
+								className="select"
+								id="amount"
+								autoComplete="off"
+								type="number"
+								name="amount"
+								placeholder="montant"
+							/>
 						</div>
 						<div className="transferNumber">
 							<label className="CompteName" htmlFor="description">
@@ -147,6 +154,7 @@ function TransferBox() {
 								id="description"
 								type="text"
 								name="description"
+								autoComplete="off"
 								placeholder="Virement pour mamie, merci mamie"
 							/>
 						</div>
